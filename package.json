@@ -1,0 +1,15 @@
+{
+  "name": "ten-up-primary-cat-react-jsx-cgb-guten-block",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cgb-scripts start",
+    "build": "cgb-scripts build",
+    "eject": "cgb-scripts eject"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@wordpress/components": "^10.0.3",
+    "cgb-scripts": "1.23.1"
+  }
+}
