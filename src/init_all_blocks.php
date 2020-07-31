@@ -143,23 +143,16 @@ if (!class_exists( 'InitAllBlocks')) {
 		 */
 		public function primary_block_render($attributes) {
 
-			/**
-			 * Closure for no posts happenstance
-			 *
-			 * @return string The rendered response
-			 */
-			function empty_statement() {
-				return '<h2> There are no posts to display! </h2>';
-			}
+			$empty_statement = '<h2> There are no posts to display! </h2>';
 
 			if ($attributes['primary_category']<1)
-				return empty_statement();
+				return $empty_statement;
 
 			$args = [];
 			$args['id'] = $attributes['primary_category'];
 			$posts = $this->fetch_posts_for_primary_cat_id( $args );
 			if (empty($posts))
-				return empty_statement();
+				return $empty_statement;
 
 			ob_start();
 			echo '<pre>';
